@@ -144,6 +144,7 @@
 
   xdg.configFile = {
     "zsh".source = ./config/zsh;
+    "nvim".source = ./config/nvim;
     "mpv".source = ./config/mpv;
     "nyaa".source = ./config/nyaa;
     "pwntools".source = ./config/pwntools;

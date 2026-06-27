@@ -9,7 +9,7 @@ let
 in
 {
   programs.nvf = {
-    enable = true;
+    enable = false;
     settings = {
       vim = {
         viAlias = true;
