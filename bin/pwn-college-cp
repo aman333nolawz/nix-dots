@@ -2,8 +2,8 @@
 LOCAL_FILE="$1"
 
 if [[ ! -f "$LOCAL_FILE" ]]; then
-    echo "[!] File not found: $LOCAL_FILE"
-    exit 1
+  echo "[!] File not found: $LOCAL_FILE"
+  exit 1
 fi
 
 # ---- prep working copy -------------------------------------------------
@@ -19,9 +19,9 @@ sed -i 's/context\.terminal[[:space:]]*=[[:space:]]*\[.*\]/context.terminal = ["
 # ---- patch 2: insert pwndbg source line as first line of gdbscript ------
 # Inserts directly after: gdbscript = """
 if grep -q '^gdbscript = """' "$TMPFILE"; then
-    sed -i '/^gdbscript = """$/a source \/opt\/pwndbg\/gdbinit.py' "$TMPFILE"
+  sed -i '/^gdbscript = """$/a source \/opt\/pwndbg\/gdbinit.py' "$TMPFILE"
 else
-    echo "[!] Warning: could not find 'gdbscript = \"\"\"' line; gdbscript not patched."
+  echo "[!] Warning: could not find 'gdbscript = \"\"\"' line; gdbscript not patched."
 fi
 
 grep -n 'context.terminal' "$TMPFILE" || true
@@ -29,5 +29,5 @@ echo
 awk '/^gdbscript = """/{found=1} found{print; if(++c==4) exit}' "$TMPFILE"
 echo
 
-scp "$TMPFILE" hacker@dojo.pwn.college:/tmp/
+scp "$TMPFILE" hacker@dojo.pwn.college:/tmp/solve.py
 rm -f "$TMPFILE"

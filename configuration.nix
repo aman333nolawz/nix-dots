@@ -78,7 +78,7 @@ in
   };
 
 
-	fonts.fontconfig.enable = true;
+  fonts.fontconfig.enable = true;
   fonts.packages = with pkgs; [
     roboto
     noto-fonts
@@ -104,7 +104,7 @@ in
   users.users."nolawz" = {
     isNormalUser = true;
     description = "Nolawz";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "video" "libvirtd" ];
     packages = with pkgs; [];
   };
 
@@ -130,6 +130,8 @@ in
     man
     man-db
     netcat-gnu
+    qemu
+    dnsmasq
 
     mopidy-mpd
     mopidy-local
@@ -148,29 +150,40 @@ in
     qt6.qtbase
     qt6.qtmultimedia
     imagemagick
+    howdy
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.curd.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
-  virtualisation.waydroid.enable = true;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
 
- programs.steam = {
-   enable = true;
-   remotePlay.openFirewall = true;
-   dedicatedServer.openFirewall = true;
- };
+  services.howdy.enable = true;
+  services.linux-enable-ir-emitter.enable = true;
+  security.pam.services = { 
+    sudo = {
+      howdy = {
+        enable = true;
+        control = "sufficient";
+      };
+    };
 
- hardware.graphics = {
-   enable = true;
-   enable32Bit = true;
- };
+    login = {
+      howdy = {
+        enable = true;
+        control = "sufficient";
+      };
+    };
 
- programs.gamescope = {
-   enable = true;
-   enableWsi = true;
-   capSysNice = false;
- };
+    sddm = {
+      howdy = {
+        enable = true;
+        control = "sufficient";
+      };
+    };
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

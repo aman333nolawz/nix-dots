@@ -17,3 +17,6 @@ alias diff='diff --color=auto'
 # Dotfiles config
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias reload="exec zsh"
+
+alias adb_set_proxy="adb shell settings put global http_proxy 127.0.0.1:8080"
+alias adb_unset_proxy="adb shell settings put global http_proxy :0"

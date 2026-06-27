@@ -169,8 +169,8 @@
             librsvg
             libXft
             libvdpau
-            # ...
-            # Some more libraries that I needed to run programs
+
+            capstone
             cairo
             atk
             gdk-pixbuf

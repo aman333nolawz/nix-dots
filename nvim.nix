@@ -156,7 +156,6 @@ in
         };
 
         visuals = {
-          indent-blankline.enable = true;
           rainbow-delimiters.enable = true;
         };
 
@@ -252,6 +251,8 @@ in
 
         diagnostics = {
           enable = true;
+          config.underline = false;
+          config.signs = true;
           #config.virtual_lines = true;
         };
 

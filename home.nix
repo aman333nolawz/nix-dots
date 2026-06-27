@@ -58,6 +58,9 @@
     pavucontrol
     obsidian
     sioyek
+    genymotion
+    android-tools
+    caido
 
     nerd-fonts.caskaydia-cove
     nerd-fonts.jetbrains-mono
@@ -76,6 +79,7 @@
     codex
     opencode
     rustup
+    jdk
     nodejs
     prisma
     bun
@@ -86,7 +90,10 @@
     typst
     tree-sitter
     pwntools
+    pwninit
+    patchelf
     (python3.withPackages (python-pkgs: with python-pkgs; [
+      ropper
       requests
       numpy
     ]))
