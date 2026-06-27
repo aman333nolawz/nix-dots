@@ -6,7 +6,6 @@
     ./zsh.nix
     ./kitty.nix
     ./theming.nix
-    ./nvim.nix
     ./ncmpcpp.nix
     ./noctalia.nix
     ./spotify.nix
