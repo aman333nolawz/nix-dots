@@ -60,7 +60,8 @@
     sioyek
     genymotion
     android-tools
-    caido
+    caido-desktop
+    caido-cli
 
     nerd-fonts.caskaydia-cove
     nerd-fonts.jetbrains-mono
