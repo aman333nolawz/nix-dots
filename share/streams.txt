@@ -16,4 +16,4 @@ TVP Sport 1 HD (PL),acestream://d6f0a6377c31f68b1c1c071e0a8f9f105a455867
 ZDF HD (DE),acestream://c71fb593810ce837545e8d8b384e50a42c35a316
 DAZN 1 BAR FHD (ES),acestream://1e7f5efc1913efaf7042a9b1a49d1f9adc5bc187
 BeIN Sports 1 (BE),acestream://bba1905fcd1c4975aec544047bf8e4cd23ce3fe0
-TVP 1 HD,acestream://eeaa185d0305a21a8fa388f79adaf9b1677628da
+TVP 1 HD,http://localhost:6878/ace/getstream?infohash=eeaa185d0305a21a8fa388f79adaf9b1677628da

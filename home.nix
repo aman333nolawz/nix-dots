@@ -85,6 +85,7 @@
     bun
     gcc
     gnumake
+    clang-tools
     libcap
     go
     typst
