@@ -61,6 +61,7 @@
     android-tools
     caido-desktop
     caido-cli
+    ghidra
 
     nerd-fonts.caskaydia-cove
     nerd-fonts.jetbrains-mono
@@ -105,6 +106,7 @@
 
   programs.git = {
     enable = true;
+    lfs.enable = true;
     settings.user.name = "aman333nolawz";
     settings.user.email = "amananudhiu@gmail.com";
     settings = {

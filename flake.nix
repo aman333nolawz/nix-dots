@@ -185,6 +185,12 @@
             # Needed to run, via virtualenv + pip, matplotlib & tikzplotlib
             stdenv.cc.cc.lib # to provide libstdc++.so.6
             pkgs.gcc-unwrapped.lib
+
+            pkgsi686Linux.stdenv.cc.cc
+            pkgsi686Linux.zlib
+            pkgsi686Linux.glib
+            pkgsi686Linux.glibc
+            pkgsi686Linux.openssl
         ];
 
         runScript = "zsh";

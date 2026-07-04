@@ -112,6 +112,7 @@ in
     enable = true;
     powerOnBoot = false;
   };
+  hardware.graphics.enable32Bit = true;
   services.blueman.enable = true;
   services.tuned.enable = true;
   services.udisks2.enable = true;
