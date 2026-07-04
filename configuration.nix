@@ -150,7 +150,6 @@ in
     qt6.qtbase
     qt6.qtmultimedia
     imagemagick
-    howdy
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.curd.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -159,31 +158,6 @@ in
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
   networking.firewall.trustedInterfaces = [ "virbr0" ];
-
-  services.howdy.enable = true;
-  services.linux-enable-ir-emitter.enable = true;
-  security.pam.services = { 
-    sudo = {
-      howdy = {
-        enable = true;
-        control = "sufficient";
-      };
-    };
-
-    login = {
-      howdy = {
-        enable = true;
-        control = "sufficient";
-      };
-    };
-
-    sddm = {
-      howdy = {
-        enable = true;
-        control = "sufficient";
-      };
-    };
-  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

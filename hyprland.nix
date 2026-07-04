@@ -6,6 +6,7 @@
     systemd.enable = false;
     extraConfig = ''
     require("keybinds")
+    require("monitors")
     require("windowrules")
     '';
 

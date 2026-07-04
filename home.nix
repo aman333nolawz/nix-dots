@@ -74,6 +74,9 @@
     foremost
     stegsolve
 
+    wineWow64Packages.stagingFull
+    winetricks
+
     openssl
     gdb
     codex
