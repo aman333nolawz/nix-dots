@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# this script is used to automatically pause spotify when firefox is playing audio and resume spotify when firefox is paused or stopped.
+
+playerctl --player=firefox status --follow | while read status; do
+    case "$status" in
+        Playing)
+            playerctl --player=spotify pause
+            ;;
+        Paused|Stopped)
+            playerctl --player=spotify play
+            ;;
+    esac
+done
