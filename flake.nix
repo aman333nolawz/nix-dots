@@ -3,7 +3,6 @@
 	inputs = {
 		nixpkgs.url = "nixpkgs/nixos-unstable";
     qylock.url = "github:Darkkal44/qylock";
-    nvf.url = "github:notashelf/nvf";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     grub-of-tsushima = {
@@ -42,7 +41,7 @@
 		};
 	};
 
-	outputs = { nixpkgs, home-manager, qylock, nvf, sops-nix, self, ... }@inputs:
+	outputs = { nixpkgs, home-manager, qylock, sops-nix, self, ... }@inputs:
 		let 
 			system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -229,7 +228,6 @@
 				inherit pkgs;
 				extraSpecialArgs = { inherit inputs; };
 				modules = [
-          nvf.homeManagerModules.default #
           inputs.spicetify-nix.homeManagerModules.default
           ./home.nix
           inputs.sops-nix.homeManagerModule
