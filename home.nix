@@ -142,7 +142,7 @@
       background_color = "1.0 1.0 1.0";
       startup_commands = [
         "toggle_visual_scroll"
-        "toggle_dark_mode"
+        "toggle_statusbar"
       ];
       text_highlight_color = "1.0 0.0 0.0";
     };

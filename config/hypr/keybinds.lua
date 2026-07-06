@@ -42,6 +42,12 @@ for i = 1, 10 do
     hl.bind(mod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
 
+-- Move windows left, right, up and down in split
+hl.bind(mod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
+
 -- scratchpad
 hl.bind(mod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
