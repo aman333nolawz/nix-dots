@@ -169,6 +169,9 @@
             libXft
             libvdpau
 
+            wayland
+            egl-wayland
+
             capstone
             cairo
             atk
