@@ -6,7 +6,6 @@
     ./zsh.nix
     ./kitty.nix
     ./theming.nix
-    ./ncmpcpp.nix
     ./noctalia.nix
     ./spotify.nix
   ];
@@ -18,7 +17,7 @@
   sops = {
     defaultSopsFile = ./secrets/secrets.yaml;
     age.keyFile = "/home/nolawz/.config/sops/age/keys.txt";
-    secrets.mopidy-scrobbler = {};
+    secrets.lastfm-password = {};
   };
 
   home.packages = with pkgs; [
@@ -30,9 +29,10 @@
     deluge
     mpv
     mpc
-    mopidy
+    mpd
     yt-dlp
-    ncmpcpp
+    mpd
+    rmpc
     vimiv-qt
     rofi
     matugen
@@ -117,6 +117,30 @@
     enable = true;
     gitCredentialHelper = {
       enable = true;
+    };
+  };
+
+
+  services.mpd = {
+    enable = true;
+    musicDirectory = "/home/nolawz/Music";
+    extraConfig = ''
+    audio_output {
+      type "pipewire"
+      name "PipeWire"
+      mixer_type "software"
+    }
+  '';
+  };
+
+  services.mpdscribble = {
+    enable = true;
+
+    endpoints = {
+      "last.fm" = {
+        username = "Nolawz_333";
+        passwordFile = config.sops.secrets.lastfm-password.path;
+      };
     };
   };
 

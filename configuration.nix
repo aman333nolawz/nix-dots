@@ -134,10 +134,6 @@ in
     qemu
     dnsmasq
 
-    mopidy-mpd
-    mopidy-local
-    mopidy-scrobbler
-
     age
     sops
     bluez
