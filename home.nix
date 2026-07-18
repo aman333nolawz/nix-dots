@@ -26,7 +26,7 @@
     aria2
     unzip
     awww
-    deluge
+    qbittorrent
     mpv
     mpc
     mpd
@@ -62,6 +62,9 @@
     caido-desktop
     caido-cli
     ghidra
+    tor-browser
+    keepassxc
+    texliveMedium
 
     nerd-fonts.caskaydia-cove
     nerd-fonts.jetbrains-mono
