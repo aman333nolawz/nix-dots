@@ -212,7 +212,7 @@
 
           programs.qylock = {
             enable = true;
-            theme = "sword";
+            theme = "minecraft";
 
             themeOptions = {
               terraria.backgroundMode = "time";              # time | random | static

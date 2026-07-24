@@ -85,6 +85,8 @@
     gdb
     codex
     opencode
+    github-copilot-cli
+    gradle
     rustup
     jdk
     nodejs
