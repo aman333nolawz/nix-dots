@@ -57,6 +57,7 @@
     pavucontrol
     obsidian
     sioyek
+    mangal
     genymotion
     android-tools
     caido-desktop
@@ -65,6 +66,7 @@
     tor-browser
     keepassxc
     texliveMedium
+    libreoffice
 
     nerd-fonts.caskaydia-cove
     nerd-fonts.jetbrains-mono
@@ -77,6 +79,7 @@
     xxd
     foremost
     stegsolve
+    nmap
 
     wineWow64Packages.stagingFull
     winetricks
@@ -87,7 +90,6 @@
     opencode
     github-copilot-cli
     gradle
-    rustup
     jdk
     nodejs
     prisma
@@ -212,7 +214,7 @@
     TERMINAL = "kitty";
     EXPLORER = "nemo";
 
-    GTK_THEME = "Tokyonight-Dark";
+    GTK_THEME = "catppuccin-mocha-blue-standard";
     GTK_APPLICATION_PREFER_DARK_THEME = "1";
     QT_STYLE_OVERRIDE = "gtk3";
     QT_QPA_PLATFORMTHEME = "gtk3";

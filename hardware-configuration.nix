@@ -26,7 +26,7 @@
 
   fileSystems."/mnt" =
     { device = "/dev/disk/by-uuid/F4AA8EA7AA8E65C8";
-      fsType = "ntfs3";
+      fsType = "ntfs";
       options = [
         "rw"
         "uid=1000"

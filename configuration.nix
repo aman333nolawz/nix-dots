@@ -37,6 +37,7 @@ in
 
   networking.hostName = "nolawz-pc"; 
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.powersave = false;
 
   programs.gpu-screen-recorder.enable = true;
   time.timeZone = "Asia/Kolkata";
@@ -108,6 +109,15 @@ in
     packages = with pkgs; [];
   };
 
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    wireplumber.enable = true;
+  };
+  security.rtkit.enable = true;
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = false;
@@ -133,6 +143,14 @@ in
     netcat-gnu
     qemu
     dnsmasq
+
+    rustc
+    cargo
+
+    pkg-config
+    alsa-lib
+    wayland
+    libxkbcommon
 
     age
     sops
