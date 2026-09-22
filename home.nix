@@ -67,6 +67,7 @@
     keepassxc
     texliveMedium
     libreoffice
+    telegram-desktop
 
     nerd-fonts.caskaydia-cove
     nerd-fonts.jetbrains-mono
