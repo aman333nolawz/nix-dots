@@ -58,7 +58,6 @@
     obsidian
     sioyek
     mangal
-    genymotion
     android-tools
     caido-desktop
     caido-cli
@@ -68,6 +67,7 @@
     texliveMedium
     libreoffice
     telegram-desktop
+    # genymotion
 
     nerd-fonts.caskaydia-cove
     nerd-fonts.jetbrains-mono

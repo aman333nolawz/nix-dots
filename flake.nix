@@ -207,6 +207,27 @@
 			};
 			modules = [
 				./configuration.nix
+        
+        home-manager.nixosModules.home-manager
+
+        {
+          home-manager.users.nolawz = {
+            imports = [
+              ./home.nix
+              inputs.spicetify-nix.homeManagerModules.default
+              inputs.sops-nix.homeManagerModule
+              inputs.nyaa.homeManagerModule
+            ];
+          };
+
+          home-manager.extraSpecialArgs = {
+            inherit inputs;
+          };
+
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+        }
+
         qylock.nixosModules.default
         ({ pkgs, ... }: {
           services.displayManager.sddm.enable = true;
@@ -229,18 +250,18 @@
 
 		};
 
-		homeConfigurations = {
-			nolawz = home-manager.lib.homeManagerConfiguration {
-				inherit pkgs;
-				extraSpecialArgs = { inherit inputs; };
-				modules = [
-          inputs.spicetify-nix.homeManagerModules.default
-          ./home.nix
-          inputs.sops-nix.homeManagerModule
-          inputs.nyaa.homeManagerModule
-        ];
-			};
-		};
+		# homeConfigurations = {
+		# 	nolawz = home-manager.lib.homeManagerConfiguration {
+		# 		inherit pkgs;
+		# 		extraSpecialArgs = { inherit inputs; };
+		# 		modules = [
+		#         inputs.spicetify-nix.homeManagerModules.default
+		#         ./home.nix
+		#         inputs.sops-nix.homeManagerModule
+		#         inputs.nyaa.homeManagerModule
+		#       ];
+		# 	};
+		# };
 	};
 }
 
