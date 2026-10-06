@@ -159,6 +159,16 @@ in
     wayland
     libxkbcommon
 
+    libX11
+    libXcursor
+    libXi
+    libXrandr
+    libXinerama
+    libXext
+    libXfixes
+    libxcb
+    libxkbcommon
+
     age
     sops
     bluez
@@ -176,6 +186,74 @@ in
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     # inputs.curd.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+  environment.variables.PKG_CONFIG_PATH = "${pkgs.alsa-lib}/lib/pkgconfig";
+
+  programs.nix-ld = {
+  enable = true;
+
+  libraries = with pkgs; [
+    gcc
+    zlib
+    zstd
+    curl
+    openssl
+    libssh
+    bzip2
+    libxml2
+    xz
+
+    glib
+    gtk2
+    gtk3
+
+    libX11
+    libXext
+    libXfixes
+    libXrandr
+    libXrender
+    libXcursor
+    libXi
+    libXinerama
+    libXdamage
+    libXcomposite
+    libXtst
+    libXxf86vm
+    libSM
+    libICE
+
+    libxcb
+    libxkbcommon
+
+    libGL
+    libva
+    libdrm
+    mesa
+
+    wayland
+    egl-wayland
+
+    alsa-lib
+    SDL
+    SDL2
+
+    libusb1
+    libudev0-shim
+
+    fontconfig
+    freetype
+    cairo
+    pango
+    atk
+    gdk-pixbuf
+
+    dbus
+    expat
+    nspr
+    nss
+
+    stdenv.cc.cc
+  ];
+};
 
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;

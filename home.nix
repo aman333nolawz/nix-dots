@@ -112,6 +112,7 @@
       ropper
       requests
       numpy
+      guessit
     ]))
   ];
 
