@@ -22,6 +22,7 @@
 
   home.packages = with pkgs; [
     hypridle
+    hyprlock
     p7zip
     aria2
     unzip
@@ -81,6 +82,8 @@
     foremost
     stegsolve
     nmap
+    iverilog
+    gtkwave
 
     wineWow64Packages.stagingFull
     winetricks
@@ -190,6 +193,8 @@
     "hypr/keybinds.lua".source = ./config/hypr/keybinds.lua;
     "hypr/windowrules.lua".source = ./config/hypr/windowrules.lua;
     "hypr/hypridle.conf".source = ./config/hypr/hypridle.conf;
+    "hypr/hyprlock.conf".source = ./config/hypr/hyprlock.conf;
+    "hypr/mocha.conf".source = ./config/hypr/mocha.conf;
     "spotify-flags.conf".text = ''
       --enable-features=UseOzonePlatform
       --ozone-platform=wayland

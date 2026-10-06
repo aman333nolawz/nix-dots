@@ -13,7 +13,7 @@ hl.bind(mod .. " + E", hl.dsp.exec_cmd("$EXPLORER"))
 hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser))
 
 hl.bind(mod .. " + X", hl.dsp.exec_cmd("~/.config/rofi/powermenu/type-2/powermenu.sh"))
-hl.bind(mod .. " + L", hl.dsp.exec_cmd("qylock-lock"))
+hl.bind(mod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
 hl.bind(mod .. " + A", hl.dsp.exec_cmd("curd"))
 hl.bind(mod .. " + ALT + B", hl.dsp.exec_cmd("~/.local/bin/blueconn"))

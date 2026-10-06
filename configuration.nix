@@ -122,6 +122,7 @@ in
     enable = true;
     powerOnBoot = false;
   };
+  hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
   services.blueman.enable = true;
   services.tuned.enable = true;
@@ -143,6 +144,12 @@ in
     netcat-gnu
     qemu
     dnsmasq
+
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
 
     rustc
     cargo
@@ -167,7 +174,7 @@ in
     imagemagick
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.curd.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.curd.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   virtualisation.libvirtd.enable = true;
