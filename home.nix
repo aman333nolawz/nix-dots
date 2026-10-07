@@ -65,6 +65,7 @@
     ghidra
     tor-browser
     keepassxc
+    jq
     texliveMedium
     libreoffice
     telegram-desktop

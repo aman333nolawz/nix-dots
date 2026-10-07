@@ -151,6 +151,7 @@ in
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
 
+    clang
     rustc
     cargo
 
@@ -168,6 +169,10 @@ in
     libXfixes
     libxcb
     libxkbcommon
+
+    (retroarch.withCores (cores: with cores; [
+      nestopia
+    ]))
 
     age
     sops
