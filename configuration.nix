@@ -192,7 +192,6 @@ in
   enable = true;
 
   libraries = with pkgs; [
-    gcc
     zlib
     zstd
     curl
@@ -232,7 +231,6 @@ in
     wayland
     egl-wayland
 
-    alsa-lib
     SDL
     SDL2
 
