@@ -127,6 +127,7 @@ in
   services.blueman.enable = true;
   services.tuned.enable = true;
   services.udisks2.enable = true;
+  services.gvfs.enable = true;
   services.tailscale.enable = true;
 
   # Allow unfree packages

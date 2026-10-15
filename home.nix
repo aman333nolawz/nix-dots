@@ -66,6 +66,7 @@
     tor-browser
     keepassxc
     jq
+    nasm
     texliveMedium
     libreoffice
     telegram-desktop
