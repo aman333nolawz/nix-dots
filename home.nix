@@ -70,6 +70,7 @@
     texliveMedium
     libreoffice
     telegram-desktop
+    nh
     # genymotion
 
     nerd-fonts.caskaydia-cove
