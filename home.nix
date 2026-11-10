@@ -6,7 +6,6 @@
     ./zsh.nix
     ./kitty.nix
     ./theming.nix
-    ./noctalia.nix
     ./spotify.nix
   ];
 
@@ -26,7 +25,6 @@
     p7zip
     aria2
     unzip
-    awww
     qbittorrent
     mpv
     mpc
@@ -39,7 +37,6 @@
     matugen
     auto-cpufreq
     nbfc-linux
-    quickshell
     ripgrep
     nemo-with-extensions
     nwg-displays
@@ -93,7 +90,6 @@
 
     openssl
     gdb
-    codex
     opencode
     github-copilot-cli
     gradle
@@ -109,7 +105,7 @@
     typst
     tree-sitter
     pwntools
-    pwninit
+    # pwninit
     patchelf
     (python3.withPackages (python-pkgs: with python-pkgs; [
       ropper
@@ -159,7 +155,6 @@
     };
   };
 
-  services.awww.enable = true;
   services.mpris-proxy.enable = true;
   services.udiskie = {
     enable = true;
@@ -224,7 +219,7 @@
     TERMINAL = "kitty";
     EXPLORER = "nemo";
 
-    GTK_THEME = "catppuccin-mocha-blue-standard";
+    GTK_THEME = "adw-gtk3-dark";
     GTK_APPLICATION_PREFER_DARK_THEME = "1";
     QT_STYLE_OVERRIDE = "gtk3";
     QT_QPA_PLATFORMTHEME = "gtk3";

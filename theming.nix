@@ -3,12 +3,8 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Mocha-Standard-Blue-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
-        size = "standard";
-        variant = "mocha";
-      };
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
     };
 
     iconTheme = {
@@ -36,7 +32,7 @@
 
     # GTK4 Setup
     "org/gnome/desktop/interface" = {
-      gtk-theme = "Catppuccin-Mocha-Standard-Blue-Dark";
+      gtk-theme = "adw-gtk3-dark";
       color-scheme = "prefer-dark";
     };
   };

@@ -126,9 +126,11 @@ in
   hardware.graphics.enable32Bit = true;
   services.blueman.enable = true;
   services.tuned.enable = true;
+  services.upower.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
-  services.tailscale.enable = true;
+  # services.tailscale.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -139,7 +141,6 @@ in
     kitty
     git
     bibata-cursors
-    hyprshell
     man
     man-db
     netcat-gnu
@@ -208,7 +209,6 @@ in
     xz
 
     glib
-    gtk2
     gtk3
 
     libX11

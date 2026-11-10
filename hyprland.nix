@@ -53,8 +53,7 @@
           "hyprland.start"
          (lib.generators.mkLuaInline ''
          function()
-           hl.exec_cmd("hyprshell run -q")
-           hl.exec_cmd("noctalia-shell")
+           hl.exec_cmd("noctalia")
          end'')
        ];
       };

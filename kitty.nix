@@ -2,7 +2,9 @@
 {
   programs.kitty = {
     enable = true;
-    themeFile = "tokyo_night_night";
+    extraConfig = ''
+      include themes/noctalia.conf
+    '';
     font = {
       name = "CaskaydiaCove NF";
       size = 12;
