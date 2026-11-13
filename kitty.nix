@@ -12,6 +12,7 @@
     settings = {
       disable_ligatures = "never";
       window_padding_width = 20;
+      enable_audio_bell = false;
       cursor_trail = 1;
       allow_remote_control = true;
       tab_bar_edge = "bottom";
