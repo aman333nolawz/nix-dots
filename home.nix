@@ -181,6 +181,7 @@
   };
 
   xdg.configFile = {
+    "noctalia".source = ./config/noctalia;
     "zsh".source = ./config/zsh;
     "nvim".source = ./config/nvim;
     "mpv/fonts".source = ./config/mpv/fonts;

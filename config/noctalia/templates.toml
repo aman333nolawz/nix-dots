@@ -1,0 +1,3 @@
+[theme.templates.user.my_app]
+input_path  = "$XDG_CONFIG_HOME/noctalia/templates/uosc.conf"
+output_path = "$XDG_CONFIG_HOME/mpv/script-opts/uosc.conf"
