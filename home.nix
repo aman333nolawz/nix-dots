@@ -67,6 +67,7 @@
     telegram-desktop
     nh
     # genymotion
+    ani-cli
 
     nerd-fonts.caskaydia-cove
     nerd-fonts.jetbrains-mono
@@ -97,7 +98,6 @@
     bun
     gcc
     gnumake
-    clang-tools
     libcap
     go
     typst

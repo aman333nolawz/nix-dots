@@ -191,7 +191,6 @@ in
     imagemagick
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    # inputs.curd.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   environment.variables.PKG_CONFIG_PATH = "${pkgs.alsa-lib}/lib/pkgconfig";
 

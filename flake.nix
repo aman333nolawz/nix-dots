@@ -20,11 +20,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    curd = {
-        url = "github:Wraient/curd";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nyaa = {
       url = "github:Beastwick18/nyaa";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -59,9 +54,11 @@
         targetPkgs = pkgs: with pkgs; [
             go
             gcc
+            clang-tools
+            clang
+            cmake
             zlib
             zstd
-            stdenv.cc.cc
             curl
             openssl
             attr
@@ -177,9 +174,8 @@
             libxkbcommon
             # Needed to run, via virtualenv + pip, matplotlib & tikzplotlib
             stdenv.cc.cc.lib # to provide libstdc++.so.6
-            pkgs.gcc-unwrapped.lib
 
-            pkgsi686Linux.stdenv.cc.cc
+            pkgsi686Linux.stdenv.cc.cc.lib
             pkgsi686Linux.zlib
             pkgsi686Linux.glib
             pkgsi686Linux.glibc

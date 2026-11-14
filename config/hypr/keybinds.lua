@@ -15,7 +15,7 @@ hl.bind(mod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mod .. " + X", hl.dsp.exec_cmd("~/.config/rofi/powermenu/type-2/powermenu.sh"))
 hl.bind(mod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
-hl.bind(mod .. " + A", hl.dsp.exec_cmd("curd"))
+hl.bind(mod .. " + A", hl.dsp.exec_cmd("ani-cli --rofi"))
 hl.bind(mod .. " + ALT + B", hl.dsp.exec_cmd("~/.local/bin/blueconn"))
 hl.bind(mod .. " + SHIFT + N", hl.dsp.exec_cmd("~/.local/bin/epaper"))
 hl.bind(mod .. " + W", hl.dsp.exec_cmd("~/.local/bin/watch_streams"))
