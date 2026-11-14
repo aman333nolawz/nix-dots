@@ -7,6 +7,7 @@
     ./kitty.nix
     ./theming.nix
     ./spotify.nix
+    ./mpv.nix
   ];
 
   home.username = "nolawz";
@@ -25,7 +26,6 @@
     aria2
     unzip
     qbittorrent
-    mpv
     mpc
     mpd
     yt-dlp
@@ -183,7 +183,11 @@
   xdg.configFile = {
     "zsh".source = ./config/zsh;
     "nvim".source = ./config/nvim;
-    "mpv".source = ./config/mpv;
+    "mpv/fonts".source = ./config/mpv/fonts;
+    "mpv/input.conf".source = ./config/mpv/input.conf;
+    "mpv/script-opts/anitracker.py".source = ./config/mpv/script-opts/anitracker.py;
+    "mpv/script-opts/streamsave.conf".source = ./config/mpv/script-opts/streamsave.conf;
+    "mpv/scripts".source = ./config/mpv/scripts;
     "nyaa".source = ./config/nyaa;
     "pwntools".source = ./config/pwntools;
     "electron-flags.conf".source = ./config/electron-flags.conf;
