@@ -761,35 +761,10 @@ require("lazy").setup({
   {
     'xeluxee/competitest.nvim',
     dependencies = 'MunifTanjim/nui.nvim',
-    config = function() require('competitest').setup() end,
+    config = function()
+      require('competitest').setup({
+        template_file = { cpp = "~/Coding/codeforces/templates/template.cpp" },
+      })
+    end,
   },
-  -- {
-  -- 	"yunusey/codeforces-nvim",
-  -- 	config = function()
-  -- 		require("codeforces-nvim").setup({
-  -- 			use_term_toggle = true,
-  -- 			cf_path = "/home/nolawz/Coding/codeforces/",
-  -- 			compiler = {
-  -- 				cpp = { "g++", "@.cpp", "-o", "@" },
-  -- 				py = {},
-  -- 			},
-  -- 			run = {
-  -- 				cpp = { "@" },
-  -- 				py = { "python3", "@.py" },
-  -- 			},
-  -- 			-- notify = function(title, message, type)
-  -- 			--   local notify = require('notify')
-  -- 			--   if message == nil then
-  -- 			--     notify(title, type, {
-  -- 			--       render = "minimal",
-  -- 			--     })
-  -- 			--   else
-  -- 			--     notify(message, type, {
-  -- 			--       title = title,
-  -- 			--     })
-  -- 			--   end
-  -- 			-- end
-  -- 		})
-  -- 	end,
-  -- },
 })
