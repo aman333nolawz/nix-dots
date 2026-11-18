@@ -186,6 +186,7 @@
     "nvim".source = ./config/nvim;
     "mpv/fonts".source = ./config/mpv/fonts;
     "mpv/input.conf".source = ./config/mpv/input.conf;
+    "mpv/script-opts/rate_movie.py".source = ./config/mpv/script-opts/rate_movie.py;
     "mpv/script-opts/anitracker.py".source = ./config/mpv/script-opts/anitracker.py;
     "mpv/script-opts/streamsave.conf".source = ./config/mpv/script-opts/streamsave.conf;
     "mpv/scripts".source = ./config/mpv/scripts;
