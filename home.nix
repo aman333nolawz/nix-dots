@@ -188,6 +188,8 @@
     "mpv/input.conf".source = ./config/mpv/input.conf;
     "mpv/script-opts/rate_movie.py".source = ./config/mpv/script-opts/rate_movie.py;
     "mpv/script-opts/anitracker.py".source = ./config/mpv/script-opts/anitracker.py;
+    "mpv/script-opts/trakt.py".source = ./config/mpv/script-opts/trakt.py;
+    "mpv/script-opts/trakt.conf".source = ./config/mpv/script-opts/trakt.conf;
     "mpv/script-opts/streamsave.conf".source = ./config/mpv/script-opts/streamsave.conf;
     "mpv/scripts".source = ./config/mpv/scripts;
     "nyaa".source = ./config/nyaa;
